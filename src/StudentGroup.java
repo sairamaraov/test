@@ -148,27 +148,26 @@ if( index<0 || index >= students.length)
 		else
 		{
 		
-		int index=-1;
-		for(int i=0;i<students.length-1;i++)
-		{
-			if(students[i]==student)
+			int index=-1;
+			for(int i=0;i<students.length-1;i++)
 			{
-				index = i;
-				break;
-			}
+			if(students[i]==student)
+				{
+					index = i;
+					break;
+				}
 		}
 		if(index==-1)
 			throw new IllegalArgumentException("do not exists");
 		else
-		{
+			{
 		
 			remove(index);
-		}
+			}
 		
 	}
-}
 
-	
+	}
 	
 	@Override
 	public void removeFromIndex(int index) {
@@ -194,8 +193,7 @@ if( index<0 || index >= students.length)
 	public void bubbleSort() {
 		for (int a = 1; a < students.length; a++) {
         for (int b = 0; b < students.length - a; b++) {
-            if (((students[b].getFullName())
-                    .compareTo((students[b + 1].getFullName()))) > 0) {
+            if (((students[b].getFullName()).compareTo((students[b + 1].getFullName()))) > 0) {
                 
                 Student temp = students[b];
                 students[b] = students[b + 1];
@@ -318,4 +316,4 @@ if( index<0 || index >= students.length)
 		}	// Add your implementation here
 		
 	}
-}
+ }
