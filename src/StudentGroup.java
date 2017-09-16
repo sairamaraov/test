@@ -249,7 +249,7 @@ if( index<0 || index >= students.length)
 		for(int i=0;i<students.length;i++)
 		{
 			
-			if(students[i].getDateOfBirth() > firstDate &&  students[i].getDateOfBirth() < lastDate )
+			if(students[i].getDateOfBirth() >= firstDate &&  students[i].getDateOfBirth() <= lastDate )
 			{
 				++j;
 				stu[j]=students[i];
@@ -271,11 +271,10 @@ if( index<0 || index >= students.length)
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
 		
+		Date newDate= Date(date+days);
+		getBetweenDates(date,newDate);
 		
-		getBetweenDates(date, date+days);
 		
-		// Add your implementation here
-		return null;
 	}
 
 	@Override
