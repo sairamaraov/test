@@ -270,6 +270,10 @@ if( index<0 || index >= students.length)
 
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
+		
+		
+		getBetweenDates(date, date+days);
+		
 		// Add your implementation here
 		return null;
 	}
