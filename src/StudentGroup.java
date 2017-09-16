@@ -142,9 +142,34 @@ if( index<0 || index >= students.length)
 
 	@Override
 	public void remove(Student student) {
-		// Add your implementation here
+		
+		if(student==null)
+			throw new IllegalArgumentException("invalid parameter");
+		else
+		{
+		
+		int index=-1;
+		for(int i=0;i<students.length-1;i++)
+		{
+			if(students[i]==student)
+			{
+				index = i;
+				break;
+			}
+		}
+		if(index==-1)
+			throw new IllegalArgumentException("do not exists");
+		else
+		{
+		
+			remove(index);
+		}
+		
 	}
+}
 
+	
+	
 	@Override
 	public void removeFromIndex(int index) {
 		// Add your implementation here
