@@ -167,13 +167,27 @@ if( index<0 || index >= students.length)
 
 	@Override
 	public void bubbleSort() {
+		for (int a = 1; a < students.length; a++) {
+        for (int b = 0; b < students.length - a; b++) {
+            if (((students[b].getFullName())
+                    .compareTo((students[b + 1].getFullName()))) > 0) {
+                
+                Student temp = students[b];
+                students[b] = students[b + 1];
+                students[b + 1] = temp;
+            }
+        }
+    }
+		
 		// Add your implementation here
 	}
 
 	@Override
 	public Student[] getByBirthDate(Date date) {
-		// Add your implementation here
-		return null;
+		int flag=0;// Add your implementation here
+		for(int i=0;i<students.length;i++)
+			
+		return ;
 	}
 
 	@Override
@@ -208,7 +222,26 @@ if( index<0 || index >= students.length)
 
 	@Override
 	public Student getNextStudent(Student student) {
-		// Add your implementation here
-		return null;
+		
+		if(student==null)
+			throw new IllegalArgumentException("invalid parameter");
+		else
+		{
+		
+		int flag=0;
+		for(int i=0;i<students.length-1;i++)
+		{
+			if(students[i]==student)
+			{
+				flag=1;
+				return students[i+1];
+			}
+		}
+		if(flag==0)
+			throw new IllegalArgumentException("do not exists");
+			
+			
+		}	// Add your implementation here
+		
 	}
 }
